@@ -21,7 +21,7 @@ section {
 }
 
 input {
-	width: 40rem;
+	width: 70%;
 }
 
 .btn {
@@ -29,7 +29,7 @@ input {
 }
 
 
-@media (max-width: 864px) {
+@media (max-width: 512px) {
 	.btn {
 		margin-top: 3rem;
 	}
