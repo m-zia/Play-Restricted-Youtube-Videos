@@ -33,7 +33,7 @@ input {
 }
 
 
-@media (max-width: 512px) {
+@media (max-width: 545px) {
 	.btn {
 		margin-top: 3rem;
 	}
