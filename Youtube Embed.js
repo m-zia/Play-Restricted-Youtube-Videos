@@ -10,7 +10,19 @@ function embed() {
 	var url = document.getElementById('url').value 
 
 	// if the user inputs the full youtube url
-	if (url.includes("=")) {
+	if (url.includes("&")) {
+		var url_split = url.split("&");
+
+		var true_url = url_split[0];
+
+		var url_section = true_url.split(/=(.+)/)[1];
+
+		var link = "https://www.youtube.com/embed/" + url_section;
+    
+		document.getElementById('myframe').src = link;
+	} 
+
+	else if (url.includes("=")) {
 		var url_section = url.split(/=(.+)/)[1];
 
 		var link = "https://www.youtube.com/embed/" + url_section;
@@ -53,7 +65,19 @@ $("input").on("keypress", function(event) {
 function embed2(x) {
 
 	// if the user inputs the full youtube url
-	if (x.includes("=")) {
+	if (x.includes("&")) {
+		var url_split = x.split("&");
+
+		var true_url = url_split[0];
+
+		var url_section = true_url.split(/=(.+)/)[1];
+
+		var link = "https://www.youtube.com/embed/" + url_section;
+    
+		document.getElementById('myframe').src = link;
+	} 
+
+	else if (x.includes("=")) {
 		var url = " " + x ;
 
 		var url_section = url.split(/=(.+)/)[1]; //only want the part of the url that comes after the "="
@@ -76,5 +100,9 @@ function embed2(x) {
 	}
 	
 }
+
+
+ 
+
 
 
